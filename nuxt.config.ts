@@ -46,7 +46,18 @@ export default defineNuxtConfig({
     },
   },
   routeRules: {
-    "/": { swr: 3600 },
+    "/": {
+          swr: false, // 关闭 ISR/SWR，避免首页被边缘缓存
+          headers: {
+            "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0"
+          }
+        },
+    // 静态资源走长缓存（带内容哈希，安全）
+    "/_nuxt/**": {
+          headers: {
+            "Cache-Control": "public, max-age=31536000, immutable"
+          }
+        }
   },
   runtimeConfig: {
     // server-only
