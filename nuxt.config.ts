@@ -140,6 +140,19 @@ export default defineNuxtConfig({
       apiBase: "/api",
       // 用于 sitemap、canonical、OG 等
       siteUrl: "https://pansou.app",
+      // 平台显示优先级（前端会按此顺序渲染分组）
+      platformPriority: [
+        "aliyun",
+        "baidu",
+        "quark",
+        "115",
+        "xunlei",
+        "tianyi",
+        "uc",
+        "123",
+        "mobile",
+        "others",
+      ],
       // 向前端暴露默认频道清单，供 UI 勾选（不会影响服务端私有配置）
       tgDefaultChannels: [
         "tgsearchers3",

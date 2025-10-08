@@ -66,6 +66,8 @@ import type {
 const config = useRuntimeConfig();
 const apiBase = (config.public?.apiBase as string) || "/api";
 const siteUrl = (config.public?.siteUrl as string) || "";
+const platformPriority =
+  ((config.public as any)?.platformPriority as string[] | undefined) || [];
 
 useSeoMeta({
   title: "PanSou - 全网最全的网盘搜索",
@@ -292,6 +294,20 @@ const groupedResults = computed(() => {
   for (const type of Object.keys(source)) {
     if (!source[type]?.length) continue;
     list.push({ type, items: source[type] || [] });
+  }
+  // 按 platformPriority 排序；未配置则保持插入顺序
+  if (Array.isArray(platformPriority) && platformPriority.length > 0) {
+    const idx = (t: string) => {
+      const i = platformPriority.indexOf(t);
+      return i === -1 ? platformPriority.length : i;
+    };
+    list.sort((a, b) => {
+      const ai = idx(a.type);
+      const bi = idx(b.type);
+      if (ai !== bi) return ai - bi;
+      // 同优先级：按数量多的在前
+      return (b.items?.length || 0) - (a.items?.length || 0);
+    });
   }
   return list;
 });
