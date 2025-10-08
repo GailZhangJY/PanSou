@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <header class="hero">
-      <div class="hero__title">PanHub API 文档</div>
+      <div class="hero__title">PanSou API 文档</div>
       <div class="hero__subtitle">网盘搜索服务 API 接口文档</div>
     </header>
 
@@ -11,7 +11,7 @@
         <h2 class="section__title">API 概述</h2>
         <div class="overview">
           <p>
-            PanHub API
+            PanSou API
             提供了强大的网盘搜索功能，支持多个搜索源和插件。通过简单的 HTTP
             请求即可获取网盘资源信息。
           </p>
@@ -548,9 +548,9 @@ const data = await response.json();</code></pre>
 
 <script setup lang="ts">
 useSeoMeta({
-  title: "PanHub API 文档",
+  title: "PanSou API 文档",
   description:
-    "PanHub 网盘搜索服务 API 接口文档，包含详细的参数说明、示例代码和响应格式。",
+    "PanSou 网盘搜索服务 API 接口文档，包含详细的参数说明、示例代码和响应格式。",
 });
 
 const config = useRuntimeConfig();

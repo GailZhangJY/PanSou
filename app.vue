@@ -2,7 +2,7 @@
   <div class="layout">
     <header class="header">
       <nav class="nav">
-        <NuxtLink to="/" class="brand">PanHub</NuxtLink>
+        <NuxtLink to="/" class="brand">PanSou</NuxtLink>
         <div class="spacer" />
         <button class="link" type="button" @click="openSettings = true">
           设置
@@ -58,7 +58,7 @@ const settings = ref<UserSettings>({
   concurrency: 4,
   pluginTimeoutMs: 5000,
 });
-const LS_KEY = "panhub.settings";
+const LS_KEY = "PanSou.settings";
 
 function loadSettings() {
   if (typeof window === "undefined") return;

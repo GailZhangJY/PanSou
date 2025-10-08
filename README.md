@@ -1,14 +1,14 @@
-# PanHub · 全网最全的网盘搜索
+# PanSou · 全网最全的网盘搜索
 
 用一个搜索框，搜遍阿里云盘、夸克、百度网盘、115、迅雷等热门网盘资源。即搜即得、聚合去重、免费开源、零广告、轻量部署。
 
-在线体验：<https://panhub.shenzjd.com>
+在线体验：<https://pansou.app>
 
 > 免责声明：本项目仅用于技术学习与搜索聚合演示，不存储、不传播任何受版权保护的内容。请勿用于商业或侵权用途。
 
 ---
 
-## 为什么选择 PanHub
+## 为什么选择 PanSou
 
 - 强聚合：聚合多个优质资源站与公开频道，一次搜索多源命中
 - 智能排序：默认先给出“快速结果”，随后自动补全“深度结果”并覆盖显示
@@ -20,13 +20,13 @@
 
 ## 一键部署到 Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwu529778790%2Fpanhub.shenzjd.com&project-name=panhub&repository-name=panhub.shenzjd.com)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fgailzhangjy%2Fpansou.app&project-name=PanSou&repository-name=pansou.app)
 
 ---
 
 ## 一键部署到 Cloudflare Workers
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/wu529778790/panhub.shenzjd.com)
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/gailzhangjy/pansou.app)
 
 ---
 
@@ -34,12 +34,12 @@
 
 ```bash
 # GHCR
-docker pull ghcr.io/wu529778790/panhub.shenzjd.com:latest
-docker run --name panhub -p 3000:3000 -d ghcr.io/wu529778790/panhub.shenzjd.com:latest
+docker pull ghcr.io/gailzhangjy/pansou.app:latest
+docker run --name PanSou -p 3000:3000 -d ghcr.io/gailzhangjy/pansou.app:latest
 
 # Docker Hub
-docker pull docker.io/wu529778790/panhub.shenzjd.com:latest
-docker run --name panhub -p 3000:3000 -d docker.io/wu529778790/panhub.shenzjd.com:latest
+docker pull docker.io/gailzhangjy/pansou.app:latest
+docker run --name PanSou -p 3000:3000 -d docker.io/gailzhangjy/pansou.app:latest
 ```
 
 ## 使用说明
@@ -61,7 +61,7 @@ docker run --name panhub -p 3000:3000 -d docker.io/wu529778790/panhub.shenzjd.co
 
 ## 版权与合规
 
-- PanHub 不存储任何搜索结果内容，所有链接均来自公开网络。
+- PanSou 不存储任何搜索结果内容，所有链接均来自公开网络。
 - 请在遵守当地法律法规与平台使用条款的前提下使用本项目。
 - 若您是权利人并认为存在侵权线索，请先联系源站处理。
 

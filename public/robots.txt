@@ -2,4 +2,4 @@ User-Agent: *
 Disallow:
 
 # 指定站点地图，帮助搜索引擎更快发现页面
-Sitemap: https://panhub.shenzjd.com/sitemap.xml
+Sitemap: https://pansou.app/sitemap.xml

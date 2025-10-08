@@ -68,17 +68,17 @@ const apiBase = (config.public?.apiBase as string) || "/api";
 const siteUrl = (config.public?.siteUrl as string) || "";
 
 useSeoMeta({
-  title: "PanHub - 全网最全的网盘搜索",
+  title: "PanSou - 全网最全的网盘搜索",
   description:
     "聚合阿里云盘、夸克、百度网盘、115、迅雷等平台，实时检索各类分享链接与资源，免费、快速、无广告。",
-  ogTitle: "PanHub - 全网最全的网盘搜索",
+  ogTitle: "PanSou - 全网最全的网盘搜索",
   ogDescription:
     "聚合阿里云盘、夸克、百度网盘、115、迅雷等平台，实时检索各类分享链接与资源，免费、快速、无广告。",
   ogType: "website",
-  ogSiteName: "PanHub",
+  ogSiteName: "PanSou",
   ogImage: siteUrl ? `${siteUrl}/og.svg` : "/og.svg",
   twitterCard: "summary_large_image",
-  twitterTitle: "PanHub - 全网最全的网盘搜索",
+  twitterTitle: "PanSou - 全网最全的网盘搜索",
   twitterDescription:
     "聚合阿里云盘、夸克、百度网盘、115、迅雷等平台，实时检索各类分享链接与资源，免费、快速、无广告。",
   twitterImage: siteUrl ? `${siteUrl}/og.svg` : "/og.svg",
@@ -90,7 +90,7 @@ useHead({
     {
       name: "keywords",
       content:
-        "网盘搜索, 阿里云盘搜索, 夸克网盘搜索, 百度网盘搜索, 115 网盘, 迅雷云盘, 资源搜索, 盘搜, PanHub",
+        "网盘搜索, 阿里云盘搜索, 夸克网盘搜索, 百度网盘搜索, 115 网盘, 迅雷云盘, 资源搜索, 盘搜, PanSou",
     },
   ],
   script: [
@@ -99,7 +99,7 @@ useHead({
       innerHTML: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "WebSite",
-        name: "PanHub",
+        name: "PanSou",
         url: siteUrl || "",
         potentialAction: {
           "@type": "SearchAction",
@@ -164,7 +164,7 @@ const DEFAULT_SETTINGS: UserSettings = {
   pluginTimeoutMs: 5000,
 };
 const settings = ref<UserSettings>({ ...DEFAULT_SETTINGS });
-const LS_KEY = "panhub.settings";
+const LS_KEY = "PanSou.settings";
 function loadSettings() {
   if (typeof window === "undefined") return;
   try {
