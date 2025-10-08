@@ -7,4 +7,5 @@ compatibility_flags = ["nodejs_compat"]
 directory = ".output/public"
 binding = "ASSETS"
 
-
+[placement]
+mode = "smart"
