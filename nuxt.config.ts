@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: "zh-CN" },
-      title: "PanSou · 全网最全的网盘搜索",
+      title: "PanSou 盘搜 - 网盘搜索引擎与资源聚合 | 阿里云盘/夸克/百度网盘",
       titleTemplate: "%s · PanSou",
       meta: [
         {
@@ -16,18 +16,29 @@ export default defineNuxtConfig({
         {
           name: "description",
           content:
-            "PanSou：聚合阿里云盘、夸克、百度网盘、115、迅雷等平台的全网最全网盘搜索工具，实时检索分享资源，免费、快速、无广告。",
+            "PanSou 盘搜是专业的网盘搜索引擎，聚合阿里云盘、夸克、百度网盘、115、迅雷等平台数据，智能去重与实时检索公开分享资源；支持关键词搜索、来源筛选与并发加速，免费、快速、无广告，覆盖影视、学习资料、软件、音乐、电子书等多种类型。",
         },
         {
           name: "keywords",
           content:
-            "网盘搜索, 阿里云盘, 夸克, 百度网盘, 115, 迅雷, 资源搜索, 盘搜, PanSou, 网盘聚合搜索",
+            "网盘搜索, 网盘聚合搜索, 阿里云盘, 夸克, 百度网盘, 115, 迅雷, 资源搜索, PanSou, 盘搜, 网盘搜索引擎",
+        },
+        {
+          name: "google-site-verification",
+          content: "dKKQz3noqGglNOuY55qF3Cts_WknoWAZuNOsIRWoFok",
+        },
+        {
+          name: "msvalidate.01",
+          content: "0526A1E55ECA85E3DDB49725AB10E6B6",
         },
         { name: "theme-color", content: "#111111" },
         { property: "og:type", content: "website" },
         { property: "og:site_name", content: "PanSou" },
       ],
-      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+      link: [
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+        { rel: "manifest", href: "/site.webmanifest" }
+      ],
     },
   },
   nitro: {

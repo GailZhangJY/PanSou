@@ -4,7 +4,8 @@
       <div class="hero__logo">
         <img src="/logo.png" alt="logo" />
       </div>
-      <div class="hero__subtitle">全网最全的网盘搜索工具</div>
+      <h1 class="hero__title">PanSou 盘搜 - 全网最全的网盘搜索</h1>
+      <h2 class="hero__subtitle">聚合阿里云盘/夸克/百度网盘/115/迅雷等平台资源</h2>
     </header>
 
     <SearchBox
@@ -28,6 +29,7 @@
     </div>
 
     <section v-if="hasResults" class="results">
+      <h3>搜索结果</h3>
       <ResultGroup
         v-for="group in groupedResults"
         :key="group.type"
@@ -70,23 +72,26 @@ const platformPriority =
   ((config.public as any)?.platformPriority as string[] | undefined) || [];
 
 useSeoMeta({
-  title: "PanSou - 全网最全的网盘搜索",
+  title: "PanSou 盘搜 - 网盘搜索引擎与资源聚合 | 阿里云盘/夸克/百度网盘",
   description:
-    "聚合阿里云盘、夸克、百度网盘、115、迅雷等平台，实时检索各类分享链接与资源，免费、快速、无广告。",
-  ogTitle: "PanSou - 全网最全的网盘搜索",
+    "PanSou 盘搜是专业的网盘搜索引擎，聚合阿里云盘、夸克、百度网盘、115、迅雷等平台数据，智能去重与实时检索各类公开分享资源；支持关键词搜索、来源筛选与并发加速，免费、快速、无广告，帮你高效发现优质网盘链接与文件，覆盖影视、学习资料、软件、音乐、电子书等多种类型。",
+  ogTitle: "PanSou 盘搜 - 网盘搜索引擎与资源聚合 | 阿里云盘/夸克/百度网盘",
   ogDescription:
-    "聚合阿里云盘、夸克、百度网盘、115、迅雷等平台，实时检索各类分享链接与资源，免费、快速、无广告。",
+    "PanSou 盘搜是专业的网盘搜索引擎，聚合阿里云盘、夸克、百度网盘、115、迅雷等平台数据，智能去重与实时检索各类公开分享资源；支持关键词搜索、来源筛选与并发加速，免费、快速、无广告，帮你高效发现优质网盘链接与文件，覆盖影视、学习资料、软件、音乐、电子书等多种类型。",
   ogType: "website",
   ogSiteName: "PanSou",
+  ogUrl: siteUrl ? `${siteUrl}/` : "/",
   ogImage: siteUrl ? `${siteUrl}/og.svg` : "/og.svg",
   twitterCard: "summary_large_image",
-  twitterTitle: "PanSou - 全网最全的网盘搜索",
+  twitterTitle:
+    "PanSou 盘搜 - 网盘搜索引擎与资源聚合 | 阿里云盘/夸克/百度网盘",
   twitterDescription:
-    "聚合阿里云盘、夸克、百度网盘、115、迅雷等平台，实时检索各类分享链接与资源，免费、快速、无广告。",
+    "PanSou 盘搜是专业的网盘搜索引擎，聚合阿里云盘、夸克、百度网盘、115、迅雷等平台数据，智能去重与实时检索各类公开分享资源；支持关键词搜索、来源筛选与并发加速，免费、快速、无广告，帮你高效发现优质网盘链接与文件，覆盖影视、学习资料、软件、音乐、电子书等多种类型。",
   twitterImage: siteUrl ? `${siteUrl}/og.svg` : "/og.svg",
 });
 
 useHead({
+  titleTemplate: "%s",
   link: [{ rel: "canonical", href: siteUrl ? `${siteUrl}/` : "/" }],
   meta: [
     {
@@ -657,7 +662,7 @@ onMounted(() => {
 }
 .hero__logo img {
   width: 150px;
-  height: 128px;
+  height: 150px;
 }
 .hero__subtitle {
   color: #666;
